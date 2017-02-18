@@ -10,11 +10,14 @@ import UIKit
 
 class ViewController: UIViewController {
 
+
+    @IBOutlet weak var searchText: UITextField!
     @IBOutlet weak var button: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-    setButtons()
+    setCornersAndRadius()
     }
 
     override func didReceiveMemoryWarning() {
@@ -22,10 +25,13 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    func setButtons(){
-        button.layer.cornerRadius = 5
-        button.layer.borderWidth = 1
+    func setCornersAndRadius(){
+        button.layer.cornerRadius = 4
+        button.layer.borderWidth = 2
         button.layer.borderColor = UIColor.black.cgColor
+        searchText.layer.borderWidth = 2
+        searchText.layer.cornerRadius = 4
+       
     }
 }
 
