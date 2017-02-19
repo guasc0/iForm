@@ -10,13 +10,15 @@ import UIKit
 
 class ResultViewController: UIViewController {
 
-    @IBOutlet weak var result1: UITextField!
-    @IBOutlet weak var result2: UITextField!
-    @IBOutlet weak var result3: UITextField!
+ 
+    @IBOutlet weak var result1: UILabel!
+    @IBOutlet weak var result2: UILabel!
+    @IBOutlet weak var result3: UILabel!
+    var receivedString: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setTextFields()
+        result2.text = receivedString
         // Do any additional setup after loading the view.
     }
 
@@ -25,15 +27,7 @@ class ResultViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    func setTextFields(){
-        result1.layer.borderWidth = 2
-        result1.layer.cornerRadius = 4
-        result2.layer.borderWidth = 2
-        result2.layer.cornerRadius = 4
-        result3.layer.borderWidth = 2
-        result3.layer.cornerRadius = 4
-    
-    }
+  
 
     /*
     // MARK: - Navigation

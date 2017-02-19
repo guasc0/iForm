@@ -8,8 +8,13 @@
 
 import UIKit
 
-class TableViewController: UITableViewController {
 
+
+class TableViewController: UITableViewController {
+    var names = ["mjölk", "vatten", "paprika", "ost"]
+    let stringToPass = "HELLO WORLD!!!"
+   
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -18,6 +23,8 @@ class TableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        
+        
     }
 
 
@@ -25,26 +32,25 @@ class TableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         
-        return 2
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
        
         
-        return 1
+        return names.count
         
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-        let cell2 = tableView.dequeueReusableCell(withIdentifier: "Cell2", for: indexPath)
-        var names = ["mjölk", "vatten", "paprika", "ost"]
-        cell.textLabel?.text = names[1]
-        cell2.textLabel?.text = names[3]
+        cell.textLabel?.text = names[indexPath.row]
+        
 
         return cell
     }
+    
     
 
     /*
@@ -82,14 +88,16 @@ class TableViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        
+        let resultVC = segue.destination as! ResultViewController
+        resultVC.receivedString = names[1]
+        
     }
-    */
-
+ 
+  
 }

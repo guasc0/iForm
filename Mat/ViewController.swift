@@ -17,7 +17,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-    setCornersAndRadius()
+    setBordersAndRadius()
     }
 
     override func didReceiveMemoryWarning() {
@@ -25,12 +25,12 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    func setCornersAndRadius(){
-        button.layer.cornerRadius = 4
-        button.layer.borderWidth = 2
+    func setBordersAndRadius(){
+        button.layer.cornerRadius = 3
+        button.layer.borderWidth = 1.5
         button.layer.borderColor = UIColor.black.cgColor
-        searchText.layer.borderWidth = 2
-        searchText.layer.cornerRadius = 4
+        searchText.layer.borderWidth = 1.5
+        searchText.layer.cornerRadius = 3
        
     }
 }
