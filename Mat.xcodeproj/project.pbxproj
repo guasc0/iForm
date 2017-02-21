@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		32BF95781E5B281400BF2666 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32BF95771E5B281400BF2666 /* File.swift */; };
 		32C2818D1E55D1C400909338 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C2818C1E55D1C400909338 /* AppDelegate.swift */; };
 		32C2818F1E55D1C400909338 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C2818E1E55D1C400909338 /* ViewController.swift */; };
 		32C281921E55D1C400909338 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32C281901E55D1C400909338 /* Main.storyboard */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		32BF95771E5B281400BF2666 /* File.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		32C281891E55D1C400909338 /* Mat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		32C2818C1E55D1C400909338 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		32C2818E1E55D1C400909338 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -62,6 +64,7 @@
 				32C2818E1E55D1C400909338 /* ViewController.swift */,
 				32C281A01E55D96C00909338 /* TableViewController.swift */,
 				32C281A21E58352E00909338 /* ResultViewController.swift */,
+				32BF95771E5B281400BF2666 /* File.swift */,
 				32C281901E55D1C400909338 /* Main.storyboard */,
 				32C281931E55D1C400909338 /* Assets.xcassets */,
 				32C281951E55D1C400909338 /* LaunchScreen.storyboard */,
@@ -143,6 +146,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				32BF95781E5B281400BF2666 /* File.swift in Sources */,
 				32C2818F1E55D1C400909338 /* ViewController.swift in Sources */,
 				32C281A11E55D96C00909338 /* TableViewController.swift in Sources */,
 				32C2818D1E55D1C400909338 /* AppDelegate.swift in Sources */,
@@ -310,6 +314,7 @@
 				32C2819D1E55D1C400909338 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

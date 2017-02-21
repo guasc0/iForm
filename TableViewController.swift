@@ -13,7 +13,12 @@ import UIKit
 class TableViewController: UITableViewController {
     var names = ["mjölk", "vatten", "paprika", "ost"]
     let stringToPass = "HELLO WORLD!!!"
-   
+    var VC2: [Any] = []
+    
+    var recievedString: String?
+    
+    
+    @IBOutlet weak var resultCell: UITableViewCell!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,17 +42,18 @@ class TableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
        
-        
-        return names.count
+        //nono = searchQuery(searchField: )
+        print(VC2)
+        return VC2.count
         
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-        cell.textLabel?.text = names[indexPath.row]
         
-
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+        //cell.textLabel?.text = VC2[indexPath.row]
+        
         return cell
     }
     
@@ -96,6 +102,7 @@ class TableViewController: UITableViewController {
         
         let resultVC = segue.destination as! ResultViewController
         resultVC.receivedString = names[1]
+        
         
     }
  
