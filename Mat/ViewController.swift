@@ -13,7 +13,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var searchText: UITextField!
     @IBOutlet weak var button: UIButton!
-    var nono: [Any] = []
+    var nono: [[String: Any]] = []
     
     
     override func viewDidLoad() {
@@ -28,23 +28,25 @@ class ViewController: UIViewController {
     }
 
     @IBAction func search(_ sender: Any) {
-        performSegue(withIdentifier: "next", sender: self)
-        nono = searchQuery(searchField: searchText.text!)
+                searchQuery(searchField: searchText.text!, returnJson: gotArray)
+        
         
     }
-    /*func setBordersAndRadius(){
-        button.layer.cornerRadius = 3
-        button.layer.borderWidth = 1.5
-        button.layer.borderColor = UIColor.black.cgColor
-        //searchText.layer.borderWidth = 1.5
-        //searchText.layer.cornerRadius = 3
-       
-    }*/
+    
+    func gotArray(array: [[String: Any]]){
+     nono = array
+        DispatchQueue.main.async {
+            self.performSegue(withIdentifier: "next", sender: self)
+        }
+        
+
+    }
+    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         let VC = segue.destination as! TableViewController
-        VC.VC2 = [nono]
+        VC.VC2 = nono
         
         
     }

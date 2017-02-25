@@ -15,6 +15,7 @@
 		32C281971E55D1C400909338 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32C281951E55D1C400909338 /* LaunchScreen.storyboard */; };
 		32C281A11E55D96C00909338 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C281A01E55D96C00909338 /* TableViewController.swift */; };
 		32C281A31E58352E00909338 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C281A21E58352E00909338 /* ResultViewController.swift */; };
+		32E133AE1E5DA18600F7E1F7 /* MyCustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32E133AD1E5DA18600F7E1F7 /* MyCustomTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		32C281981E55D1C400909338 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		32C281A01E55D96C00909338 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TableViewController.swift; path = ../TableViewController.swift; sourceTree = "<group>"; };
 		32C281A21E58352E00909338 /* ResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
+		32E133AD1E5DA18600F7E1F7 /* MyCustomTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyCustomTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 				32C2818E1E55D1C400909338 /* ViewController.swift */,
 				32C281A01E55D96C00909338 /* TableViewController.swift */,
 				32C281A21E58352E00909338 /* ResultViewController.swift */,
+				32E133AD1E5DA18600F7E1F7 /* MyCustomTableViewCell.swift */,
 				32BF95771E5B281400BF2666 /* File.swift */,
 				32C281901E55D1C400909338 /* Main.storyboard */,
 				32C281931E55D1C400909338 /* Assets.xcassets */,
@@ -148,6 +151,7 @@
 			files = (
 				32BF95781E5B281400BF2666 /* File.swift in Sources */,
 				32C2818F1E55D1C400909338 /* ViewController.swift in Sources */,
+				32E133AE1E5DA18600F7E1F7 /* MyCustomTableViewCell.swift in Sources */,
 				32C281A11E55D96C00909338 /* TableViewController.swift in Sources */,
 				32C2818D1E55D1C400909338 /* AppDelegate.swift in Sources */,
 				32C281A31E58352E00909338 /* ResultViewController.swift in Sources */,

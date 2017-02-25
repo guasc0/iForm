@@ -11,13 +11,8 @@ import UIKit
 
 
 class TableViewController: UITableViewController {
-    var names = ["mjölk", "vatten", "paprika", "ost"]
-    let stringToPass = "HELLO WORLD!!!"
-    var VC2: [Any] = []
     
-    var recievedString: String?
-    
-    
+    var VC2: [[String: Any]] = [[:]]
     @IBOutlet weak var resultCell: UITableViewCell!
     
     override func viewDidLoad() {
@@ -42,8 +37,6 @@ class TableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
        
-        //nono = searchQuery(searchField: )
-        print(VC2)
         return VC2.count
         
     }
@@ -51,8 +44,17 @@ class TableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-        //cell.textLabel?.text = VC2[indexPath.row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! MyCustomTableViewCell
+        
+        if let name = VC2[indexPath.row]["name"] as? String{
+            cell.nameLabel.text = name
+        }
+        
+        if let nr = VC2[indexPath.row]["number"]{
+            
+            cell.number = nr as! Float
+            
+        }
         
         return cell
     }
@@ -100,11 +102,18 @@ class TableViewController: UITableViewController {
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        let resultVC = segue.destination as! ResultViewController
-        resultVC.receivedString = names[1]
+            if let segueSender = segue.destination as? ResultViewController,
+                let row = tableView.indexPathForSelectedRow{
+                if let cell = tableView.cellForRow(at: row) as? MyCustomTableViewCell{
+                    segueSender.pressedCellNr = Int(cell.number)
+                    
+                }
+            }
         
         
     }
+    
+    
  
   
 }
