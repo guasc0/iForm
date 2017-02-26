@@ -11,15 +11,15 @@ import UIKit
 class ViewController: UIViewController {
 
     
-    @IBOutlet weak var searchText: UITextField!
     @IBOutlet weak var button: UIButton!
+    @IBOutlet weak var searchText: UITextField!
+    //@IBOutlet weak var button: UIButton!
     var nono: [[String: Any]] = []
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-    //setBordersAndRadius()
+        setButton()
     }
 
     override func didReceiveMemoryWarning() {
@@ -48,6 +48,11 @@ class ViewController: UIViewController {
         let VC = segue.destination as! TableViewController
         VC.VC2 = nono
         
+        
+    }
+    
+    func setButton(){
+        button.layer.cornerRadius = 8
         
     }
    

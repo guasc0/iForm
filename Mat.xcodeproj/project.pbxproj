@@ -11,10 +11,10 @@
 		32C2818D1E55D1C400909338 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C2818C1E55D1C400909338 /* AppDelegate.swift */; };
 		32C2818F1E55D1C400909338 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C2818E1E55D1C400909338 /* ViewController.swift */; };
 		32C281921E55D1C400909338 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32C281901E55D1C400909338 /* Main.storyboard */; };
-		32C281941E55D1C400909338 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 32C281931E55D1C400909338 /* Assets.xcassets */; };
 		32C281971E55D1C400909338 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32C281951E55D1C400909338 /* LaunchScreen.storyboard */; };
 		32C281A11E55D96C00909338 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C281A01E55D96C00909338 /* TableViewController.swift */; };
 		32C281A31E58352E00909338 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C281A21E58352E00909338 /* ResultViewController.swift */; };
+		32D2723B1E620899007F7C7E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 32D2723A1E620899007F7C7E /* Assets.xcassets */; };
 		32E133AE1E5DA18600F7E1F7 /* MyCustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32E133AD1E5DA18600F7E1F7 /* MyCustomTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -24,11 +24,11 @@
 		32C2818C1E55D1C400909338 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		32C2818E1E55D1C400909338 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		32C281911E55D1C400909338 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		32C281931E55D1C400909338 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		32C281961E55D1C400909338 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		32C281981E55D1C400909338 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		32C281A01E55D96C00909338 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TableViewController.swift; path = ../TableViewController.swift; sourceTree = "<group>"; };
 		32C281A21E58352E00909338 /* ResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
+		32D2723A1E620899007F7C7E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		32E133AD1E5DA18600F7E1F7 /* MyCustomTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyCustomTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -69,7 +69,7 @@
 				32E133AD1E5DA18600F7E1F7 /* MyCustomTableViewCell.swift */,
 				32BF95771E5B281400BF2666 /* File.swift */,
 				32C281901E55D1C400909338 /* Main.storyboard */,
-				32C281931E55D1C400909338 /* Assets.xcassets */,
+				32D2723A1E620899007F7C7E /* Assets.xcassets */,
 				32C281951E55D1C400909338 /* LaunchScreen.storyboard */,
 				32C281981E55D1C400909338 /* Info.plist */,
 			);
@@ -137,7 +137,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				32C281971E55D1C400909338 /* LaunchScreen.storyboard in Resources */,
-				32C281941E55D1C400909338 /* Assets.xcassets in Resources */,
+				32D2723B1E620899007F7C7E /* Assets.xcassets in Resources */,
 				32C281921E55D1C400909338 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
