@@ -13,7 +13,7 @@ class MyCustomTableViewCell: UITableViewCell {
     
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var nrLabel: UILabel!
-    var number: Float = 0
+    var numberOfRow: Float = 0
     
     
     

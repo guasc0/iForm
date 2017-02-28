@@ -10,6 +10,7 @@ import UIKit
 
 class ResultViewController: UIViewController {
 
+    @IBOutlet weak var resultTitle: UINavigationItem!
     @IBOutlet weak var salt: UILabel!
     @IBOutlet weak var protein: UILabel!
     @IBOutlet weak var sugar: UILabel!
@@ -26,8 +27,6 @@ class ResultViewController: UIViewController {
     
     var nutritionData: [String: Any] = [:]
     var nutrientValues: [String: Float] = [:]
-    var name: String = "sdgsdg"
-    var info: Int?
     var pressedCellNr: Int!
    
     
@@ -36,6 +35,7 @@ class ResultViewController: UIViewController {
         super.viewDidLoad()
         
         searchQueryForNutrition(number: Int(pressedCellNr), gotNutritionData: recievedData)
+        
 
     }
 
@@ -72,45 +72,50 @@ class ResultViewController: UIViewController {
         if let carbohydratesValue = nutrientValues["carbohydrates"] {
             carbohydrates.text = "\(carbohydratesValue) g"
         }
-        self.title = nutritionData["name"] as! String?
-        setHealthyValueImg(dictionary: nutrientValues)
+        
+        resultTitle.title = nutritionData["name"] as! String?
+
+        setHealthValueImg(dictionary: nutrientValues)
        
     }
     
-    func setHealthyValueImg(dictionary: [String:Float]){
+    func setHealthValueImg(dictionary: [String:Float]){
         
-        let protein = nutrientValues["protein"]
         let fat = nutrientValues["fat"]
-        //let carbs = nutrientValues["carbohydrates"]
+        let carbs = nutrientValues["carbohydrates"]
+        let healthLevel = Double(carbs!) + Double(fat!)
         
-        if Double(protein!) > 0.5 && Double(protein!) <= 5 && Double(fat!) < 40{
-            healthyValue1.image = UIImage(named: "carrots")
-        } else if Double(protein!) > 5 && Double(protein!) < 7 && Double(fat!) < 35 {
-            healthyValue1.image = UIImage(named: "carrots")
-            healthyValue2.image = UIImage(named: "carrots")
-       
-        }else if Double(protein!) > 7 && Double(protein!) < 10 && Double(fat!) < 25 {
-            healthyValue1.image = UIImage(named: "carrots")
-            healthyValue2.image = UIImage(named: "carrots")
-            healthyValue3.image = UIImage(named: "carrots")
-        
-        }else if Double(protein!) > 10 && Double(protein!) < 25 && Double(fat!) < 15 {
-            healthyValue1.image = UIImage(named: "carrots")
-            healthyValue2.image = UIImage(named: "carrots")
-            healthyValue3.image = UIImage(named: "carrots")
-            healthyValue4.image = UIImage(named: "carrots")
-        
-        }else if Double(protein!) > 25 && Double(fat!) < 10 {
-            healthyValue1.image = UIImage(named: "carrots")
-            healthyValue2.image = UIImage(named: "carrots")
-            healthyValue3.image = UIImage(named: "carrots")
-            healthyValue4.image = UIImage(named: "carrots")
-            healthyValue5.image = UIImage(named: "carrots")
-        
+        if healthLevel > 50 && healthLevel < 70 {
+            healthyValue1.image = UIImage(named: "carrot2")
+        } else if healthLevel > 40 && healthLevel <= 50  {
+            healthyValue1.image = UIImage(named: "carrot2")
+            healthyValue2.image = UIImage(named: "carrot2")
+            
+        }else if healthLevel > 30 && healthLevel <= 40 {
+            healthyValue1.image = UIImage(named: "carrot2")
+            healthyValue2.image = UIImage(named: "carrot2")
+            healthyValue3.image = UIImage(named: "carrot2")
+            
+        }else if healthLevel > 15 && healthLevel <= 30{
+            healthyValue1.image = UIImage(named: "carrot2")
+            healthyValue2.image = UIImage(named: "carrot2")
+            healthyValue3.image = UIImage(named: "carrot2")
+            healthyValue4.image = UIImage(named: "carrot2")
+            
+        }else if healthLevel <= 15 {
+            healthyValue1.image = UIImage(named: "carrot2")
+            healthyValue2.image = UIImage(named: "carrot2")
+            healthyValue3.image = UIImage(named: "carrot2")
+            healthyValue4.image = UIImage(named: "carrot2")
+            healthyValue5.image = UIImage(named: "carrot2")
+            
         }else{
             dontEat.image = UIImage(named: "warning")
         }
+    
     }
+    
+   
 }
 
     /*
