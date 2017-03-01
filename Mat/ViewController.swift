@@ -79,7 +79,7 @@ class ViewController: UIViewController {
         eggPlant.image = UIImage(named: "Eggplant-icon")
         carrot.image = UIImage(named: "carrots")
         chili.image = UIImage(named: "chilli")
-        tomato.image = UIImage(named: "tomato-1")
+        tomato.image = UIImage(named: "tomato")
     }
     
     func dynamicAnimations(){
@@ -100,7 +100,7 @@ class ViewController: UIViewController {
     
     func imageAnimation(){
         if !animationPerformed{
-            UIView.animate(withDuration: 1.0, delay: 1.0, options: .curveLinear, animations: {
+            UIView.animate(withDuration: 0.8, delay: 1.0, options: .curveLinear, animations: {
                 self.imageConstraint.constant += self.view.bounds.width
                 self.view.layoutIfNeeded()
             }, completion: nil)

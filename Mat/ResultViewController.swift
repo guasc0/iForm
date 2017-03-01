@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ResultViewController: UIViewController {
+class ResultViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     @IBOutlet weak var resultTitle: UINavigationItem!
     @IBOutlet weak var salt: UILabel!
@@ -23,6 +23,7 @@ class ResultViewController: UIViewController {
     @IBOutlet weak var healthyValue4: UIImageView!
     @IBOutlet weak var healthyValue5: UIImageView!
     @IBOutlet weak var dontEat: UIImageView!
+   
     
     
     var nutritionData: [String: Any] = [:]
@@ -33,17 +34,10 @@ class ResultViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         searchQueryForNutrition(number: Int(pressedCellNr), gotNutritionData: recievedData)
         
-
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
+   
     func recievedData(dictionary : [String:Any]) {
         
         nutritionData = dictionary
@@ -87,6 +81,7 @@ class ResultViewController: UIViewController {
         
         if healthLevel > 50 && healthLevel < 70 {
             healthyValue1.image = UIImage(named: "carrot2")
+        
         } else if healthLevel > 40 && healthLevel <= 50  {
             healthyValue1.image = UIImage(named: "carrot2")
             healthyValue2.image = UIImage(named: "carrot2")
@@ -115,17 +110,17 @@ class ResultViewController: UIViewController {
     
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+            let imageView = segue.destination as! ImageViewController
+            imageView.nr = nutritionData["number"]
+        
+    }
+    
    
 }
 
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
+    
+ 
 
 
