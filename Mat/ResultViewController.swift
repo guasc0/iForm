@@ -106,6 +106,7 @@ class ResultViewController: UIViewController, UIImagePickerControllerDelegate, U
             
         }else{
             dontEat.image = UIImage(named: "warning")
+            animateDonEat()
         }
     
     }
@@ -116,11 +117,28 @@ class ResultViewController: UIViewController, UIImagePickerControllerDelegate, U
         
     }
     
-   
-}
-
-
+    func animateDonEat() {
+        UIView.animate(withDuration: 1.0, animations: {
+            self.dontEat.alpha = 1.0
+        
+        }, completion: {
+            (Completed: Bool) -> Void in
+            
+            UIView.animate(withDuration: 0.1, delay: 0.0,
+                           options: UIViewAnimationOptions.curveLinear, animations: {
+            
+                            self.dontEat.alpha = 0
+            }, completion: {
+                (Completed: Bool) -> Void in
+                
+                    self.animateDonEat()
+            
+            })
+            
     
- 
-
+    })
+    
+   
+    }
+}
 

@@ -11,16 +11,24 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var eggPlant: UIImageView!
-    @IBOutlet weak var carrot: UIImageView!
     @IBOutlet weak var chili: UIImageView!
-    @IBOutlet weak var tomato: UIImageView!
+    @IBOutlet weak var carrots: UIImageView!
+    @IBOutlet weak var tomatoes: UIImageView!
+    
     @IBOutlet weak var imageConstraint: NSLayoutConstraint!
     @IBOutlet weak var button: UIButton!
     @IBOutlet weak var searchText: UITextField!
     @IBOutlet weak var image: UIImageView!
     
+
+    @IBOutlet weak var tomato: NSLayoutConstraint!
+    @IBOutlet weak var egg: NSLayoutConstraint!
+    @IBOutlet weak var carrot: NSLayoutConstraint!
+    @IBOutlet weak var chilli: NSLayoutConstraint!
+    
     var VcArray: [[String: Any]] = []
     var animationPerformed = false
+    
     var dynamicAnimator : UIDynamicAnimator!
     var gravity : UIGravityBehavior!
     var collision : UICollisionBehavior!
@@ -28,7 +36,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setGravityImages()
+        //setGravityImages()
         dynamicAnimations()
         imageConstraint.constant -= view.bounds.width
         setButton()
@@ -75,21 +83,30 @@ class ViewController: UIViewController {
         
     }
     // Maybe a redundant function, can be sett in the storyboard to
-    func setGravityImages(){
+    /*func setGravityImages(){
         eggPlant.image = UIImage(named: "Eggplant-icon")
         carrot.image = UIImage(named: "carrots")
         chili.image = UIImage(named: "chilli")
         tomato.image = UIImage(named: "tomato")
-    }
+    }*/
+    
+    /*override func viewDidLayoutSubviews() {
+        for constraint in eggPlant.constraints {
+            constraint.isActive = false
+        }
+        dynamicAnimations()
+    }*/
     
     func dynamicAnimations(){
         dynamicAnimator = UIDynamicAnimator(referenceView: view)
-        gravity = UIGravityBehavior(items: [chili, tomato, eggPlant, carrot])
+        gravity = UIGravityBehavior(items: [chili, tomatoes, eggPlant, carrots])
+        
         dynamicAnimator.addBehavior(gravity)
-        collision = UICollisionBehavior(items: [chili, tomato, eggPlant, carrot])
+        collision = UICollisionBehavior(items: [chili, tomatoes, eggPlant, carrots])
         collision.translatesReferenceBoundsIntoBoundary = true
+        
         dynamicAnimator.addBehavior(collision)
-        push = UIPushBehavior(items: [eggPlant, carrot, tomato, chili], mode: .instantaneous)
+        push = UIPushBehavior(items: [chili, tomatoes, eggPlant, carrots], mode: .instantaneous)
         push.pushDirection = CGVector(dx: 56, dy: 9)
         dynamicAnimator.addBehavior(push)
         
