@@ -20,12 +20,6 @@ class ViewController: UIViewController {
     @IBOutlet weak var searchText: UITextField!
     @IBOutlet weak var image: UIImageView!
     
-
-    //@IBOutlet weak var tomato: NSLayoutConstraint!
-    //@IBOutlet weak var egg: NSLayoutConstraint!
-    //@IBOutlet weak var carrot: NSLayoutConstraint!
-    //@IBOutlet weak var chilli: NSLayoutConstraint!
-    
     var VcArray: [[String: Any]] = []
     var animationPerformed = false
     
@@ -82,31 +76,6 @@ class ViewController: UIViewController {
         button.layer.cornerRadius = 8
         
     }
-    
-    // Maybe a redundant function, images can be sett in the storyboard instead
-    //
-    /*func setGravityImages(){
-        eggPlant.image = UIImage(named: "Eggplant-icon")
-        carrot.image = UIImage(named: "carrots")
-        chili.image = UIImage(named: "chilli")
-        tomato.image = UIImage(named: "tomato")
-    }*/
-    
-    /*override func viewDidLayoutSubviews() {
-        for constraint in eggPlant.constraints {
-            constraint.isActive = false
-        }
-        for constraint in chili.constraints {
-            constraint.isActive = false
-        }
-        for constraint in carrots.constraints {
-            constraint.isActive = false
-        }
-        for constraint in tomatoes.constraints {
-            constraint.isActive = false
-        }
-            dynamicAnimations()
-    }*/
     
     func dynamicAnimations(){
         dynamicAnimator = UIDynamicAnimator(referenceView: view)

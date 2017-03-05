@@ -475,7 +475,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0YU-eM-evR">
-                                <rect key="frame" x="19" y="119" width="340" height="338"/>
+                                <rect key="frame" x="19" y="117" width="340" height="340"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.5552751776" green="1" blue="0.57752428349999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -489,7 +489,7 @@
                             <constraint firstItem="MnI-ra-wQw" firstAttribute="top" secondItem="VUZ-lH-Uvm" secondAttribute="bottom" constant="34" id="ZUM-uG-hHd"/>
                             <constraint firstItem="VUZ-lH-Uvm" firstAttribute="centerX" secondItem="O1l-w2-Xaz" secondAttribute="centerX" id="gZ3-4x-19p"/>
                             <constraint firstItem="c6F-ua-0f9" firstAttribute="top" secondItem="cY3-J2-aMh" secondAttribute="bottom" constant="25" id="isa-A1-CDs"/>
-                            <constraint firstItem="0YU-eM-evR" firstAttribute="top" secondItem="6sA-7v-BUD" secondAttribute="bottom" constant="55" id="k0C-zS-HdE"/>
+                            <constraint firstItem="0YU-eM-evR" firstAttribute="top" secondItem="6sA-7v-BUD" secondAttribute="bottom" constant="53" id="k0C-zS-HdE"/>
                             <constraint firstItem="MnI-ra-wQw" firstAttribute="top" secondItem="0YU-eM-evR" secondAttribute="bottom" constant="50" id="kRW-8K-O1y"/>
                             <constraint firstAttribute="trailing" secondItem="VUZ-lH-Uvm" secondAttribute="trailing" id="mMf-D6-FnW"/>
                             <constraint firstItem="0YU-eM-evR" firstAttribute="trailing" secondItem="TUu-Os-89F" secondAttribute="trailingMargin" id="nhO-Sm-q4o"/>

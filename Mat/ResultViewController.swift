@@ -131,13 +131,8 @@ class ResultViewController: UIViewController, UIImagePickerControllerDelegate, U
                 (Completed: Bool) -> Void in
                 
                     self.animateDonEat()
-            
             })
-            
-    
-    })
-    
-   
+        })
     }
 }
 
