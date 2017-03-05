@@ -21,10 +21,10 @@ class ViewController: UIViewController {
     @IBOutlet weak var image: UIImageView!
     
 
-    @IBOutlet weak var tomato: NSLayoutConstraint!
-    @IBOutlet weak var egg: NSLayoutConstraint!
-    @IBOutlet weak var carrot: NSLayoutConstraint!
-    @IBOutlet weak var chilli: NSLayoutConstraint!
+    //@IBOutlet weak var tomato: NSLayoutConstraint!
+    //@IBOutlet weak var egg: NSLayoutConstraint!
+    //@IBOutlet weak var carrot: NSLayoutConstraint!
+    //@IBOutlet weak var chilli: NSLayoutConstraint!
     
     var VcArray: [[String: Any]] = []
     var animationPerformed = false
@@ -82,7 +82,9 @@ class ViewController: UIViewController {
         button.layer.cornerRadius = 8
         
     }
-    // Maybe a redundant function, can be sett in the storyboard to
+    
+    // Maybe a redundant function, images can be sett in the storyboard instead
+    //
     /*func setGravityImages(){
         eggPlant.image = UIImage(named: "Eggplant-icon")
         carrot.image = UIImage(named: "carrots")
@@ -94,18 +96,27 @@ class ViewController: UIViewController {
         for constraint in eggPlant.constraints {
             constraint.isActive = false
         }
-        dynamicAnimations()
+        for constraint in chili.constraints {
+            constraint.isActive = false
+        }
+        for constraint in carrots.constraints {
+            constraint.isActive = false
+        }
+        for constraint in tomatoes.constraints {
+            constraint.isActive = false
+        }
+            dynamicAnimations()
     }*/
     
     func dynamicAnimations(){
         dynamicAnimator = UIDynamicAnimator(referenceView: view)
         gravity = UIGravityBehavior(items: [chili, tomatoes, eggPlant, carrots])
-        
         dynamicAnimator.addBehavior(gravity)
+        
         collision = UICollisionBehavior(items: [chili, tomatoes, eggPlant, carrots])
         collision.translatesReferenceBoundsIntoBoundary = true
-        
         dynamicAnimator.addBehavior(collision)
+        
         push = UIPushBehavior(items: [chili, tomatoes, eggPlant, carrots], mode: .instantaneous)
         push.pushDirection = CGVector(dx: 56, dy: 9)
         dynamicAnimator.addBehavior(push)
@@ -117,7 +128,7 @@ class ViewController: UIViewController {
     
     func imageAnimation(){
         if !animationPerformed{
-            UIView.animate(withDuration: 0.8, delay: 1.0, options: .curveLinear, animations: {
+            UIView.animate(withDuration: 0.8, delay: 1.1, options: .curveLinear, animations: {
                 self.imageConstraint.constant += self.view.bounds.width
                 self.view.layoutIfNeeded()
             }, completion: nil)

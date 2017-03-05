@@ -13,8 +13,11 @@ class ImageViewController: UIViewController, UIImagePickerControllerDelegate, UI
     @IBOutlet weak var imageView: UIImageView!
     var objectNr : [String:Any] = [:]
     var nr : Any? = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.imageView.layer.cornerRadius = self.imageView.frame.width/8.0
+        self.imageView.clipsToBounds = true
         
         if let image = UIImage(contentsOfFile: imagePath(number: nr as! Int)){
             imageView.image = image

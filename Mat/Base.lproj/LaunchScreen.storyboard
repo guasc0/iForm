@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -21,12 +22,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="iForm" translatesAutoresizingMaskIntoConstraints="NO" id="cco-h4-vrE">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iForm" translatesAutoresizingMaskIntoConstraints="NO" id="cco-h4-vrE">
                                 <rect key="frame" x="67" y="210" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.5552751776" green="1" blue="0.57752428349999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="cco-h4-vrE" secondAttribute="bottom" constant="329" id="CMN-f9-qwz"/>
+                            <constraint firstItem="cco-h4-vrE" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="190" id="Swy-e8-OMI"/>
+                            <constraint firstItem="cco-h4-vrE" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="UMp-js-hEz"/>
+                            <constraint firstItem="cco-h4-vrE" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="51" id="ooO-B7-lkX"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -105,8 +105,8 @@ class ResultViewController: UIViewController, UIImagePickerControllerDelegate, U
             healthyValue5.image = UIImage(named: "carrot2")
             
         }else{
-            dontEat.image = UIImage(named: "warning")
             animateDonEat()
+            dontEat.image = UIImage(named: "warning")
         }
     
     }
@@ -120,7 +120,6 @@ class ResultViewController: UIViewController, UIImagePickerControllerDelegate, U
     func animateDonEat() {
         UIView.animate(withDuration: 1.0, animations: {
             self.dontEat.alpha = 1.0
-        
         }, completion: {
             (Completed: Bool) -> Void in
             
